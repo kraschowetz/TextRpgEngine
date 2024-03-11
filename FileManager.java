@@ -6,6 +6,7 @@ public class FileManager {
     
     public String text =  ""; //text guarda todo o texto do arquivo lido como uma string
 
+    //função que lê o texto de um .txt e guarda como String || 2° função a ser executada
     public void readFile(String path){
         // tenta executar o seguinte:
         try{ 
