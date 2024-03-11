@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main{
 
     public static FileManager fileReader;       //guarda a classe que vai ler os arquivos com os dialogos
+    public static FlagInterpreter flagInterpreter; //guarda a classe que interpreta as flags dos dialogos
     public static Main main;
 
     public static String currentText = "";      //guarda o texto bruto do dialogo atual como uma String
@@ -17,6 +18,7 @@ public class Main{
 
         fileReader = new FileManager();                      //instancia a classe que lê os arquivos com os dialogos
         fileReader.readFile("Dialogues/teste.txt");     //executa a função de ler o dialogo de um .txt
+        flagInterpreter = new FlagInterpreter();             //instancia a classe que interpreta as flags
 
         main = new Main();                                   //instancia o objeto com esse script
         main.initDialogueLoop();                             //executa a função que inicia o loop do dialogo   

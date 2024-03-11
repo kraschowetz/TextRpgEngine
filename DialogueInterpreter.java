@@ -56,6 +56,12 @@ public class DialogueInterpreter {
             Main.dialogueState = Integer.parseInt(subOpt.split(">")[1]);    //muda a variavel da linha de dialogo
             getDialogueLine();      //atualiza a linha de dialogo a ser lida
             optAmmount = Integer.parseInt(currentLine.split(":")[2]);//verifica qnts resposta existem para o dialogo
+
+            //verifica se a linha atual não possui nenhuma flag
+            if(currentLine.split(";").length > 1){
+                Main.flagInterpreter.interpretFlag(currentLine.split(";")[1]);
+            }
+
         }
 
         //exibe o texto da linha de diálogo atual

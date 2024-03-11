@@ -1,2 +1,2 @@
-0:sim ou não?:2:/for real>20:not so sure>90:|flag goes here
-20:de fato:1:/cool>0
+0:sim ou não?:2:/for real>20:not so sure>90:
+20:de fato:1:/cool>0;flag goes here
