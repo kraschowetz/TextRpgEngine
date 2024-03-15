@@ -2,15 +2,17 @@ import java.util.Scanner;
 
 public class Main{
 
-    public static FileManager fileReader;       //guarda a classe que vai ler os arquivos com os dialogos
+    public static FileManager fileReader;           //guarda a classe que vai ler os arquivos com os dialogos
     public static FlagInterpreter flagInterpreter; //guarda a classe que interpreta as flags dos dialogos
-    public static Main main;
+    public static Main main;                        //guarda uma versão desse script
+    public static Menu menu;                        //guarda a classe do menu
 
     public static String currentText = "";      //guarda o texto bruto do dialogo atual como uma String
     public static int dialogueState = 0;        //quarga qual é a linha de dialogo atual
 
     public Scanner scan;                        //guarda o scanner
     public DialogueInterpreter interpreter;     // guarda a classe que interpreta o dialogo
+    
 
 
     //1° função a ser executada
@@ -21,7 +23,8 @@ public class Main{
         flagInterpreter = new FlagInterpreter();             //instancia a classe que interpreta as flags
 
         main = new Main();                                   //instancia o objeto com esse script
-        main.initDialogueLoop();                             //executa a função que inicia o loop do dialogo   
+        menu = new Menu(main.scan);
+        //main.initDialogueLoop();                             //executa a função que inicia o loop do dialogo   
     }
 
     //método construtor || 3° função a ser executada
