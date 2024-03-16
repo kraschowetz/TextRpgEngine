@@ -22,24 +22,23 @@ public class Menu {
                 case "1":   //estado "instruções"
                     System.out.println("\nLeia os textos, digite os numeros de 1-9 para selecionar a opção de diálogo escolhida");
                     scan.nextLine();
-                    state = "init";
+                    state = "0";
                     break;
                     //exibe as intruções, espera um input e volta para o estado inicial
 
                 case "2":   //estado "jogar"
                     System.out.print("\033[H\033[2J");  
-                    System.out.flush();  
+                    System.out.flush(); 
+
+                    closed = true;
 
                     Main.main.initDialogueLoop();
-
-                    scan.close();
-                    state = "init";
                     //limpa o console, inicia o loop de dialogo, fecha o scanner
 
                 case "3":   //estado "créditos"
                     System.out.println("\nfeito por: João Pedro Kraschowetz Souza e Maria Fernanda Silva Leite");
                     scan.nextLine();
-                    state = "init";
+                    state = "0";
                     break;
                     //mostra os creditos, espera um input e volta para o estado inicial
 
@@ -51,8 +50,6 @@ public class Menu {
             }
 
         }while(!closed);
-
-        scan.close();
     }
 
 }

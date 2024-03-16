@@ -1,2 +1,3 @@
-0:sim ou não?:2:/for real>20:not so sure>90:
-20:de fato:1:/cool>0;flag goes here
+0:URNA DO BRASIU:1:/vamo votar>1:
+1:13-pt ou 17-salmonaro?:2:/17>2>:13>2
+2:VOTOU TREZE FAZUELLY:1:/L>0

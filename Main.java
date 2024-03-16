@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main{
 
     public static FileManager fileReader;           //guarda a classe que vai ler os arquivos com os dialogos
-    public static FlagInterpreter flagInterpreter; //guarda a classe que interpreta as flags dos dialogos
+    public static FlagInterpreter flagInterpreter;  //guarda a classe que interpreta as flags dos dialogos
     public static Main main;                        //guarda uma versão desse script
     public static Menu menu;                        //guarda a classe do menu
 
