@@ -27,7 +27,7 @@ public class Menu {
                     //exibe as intruções, espera um input e volta para o estado inicial
 
                 case "2":   //estado "jogar"
-                    System.out.print("\033[H\033[2J");  
+                    System.out.print("\033[H\033[2J");
                     System.out.flush(); 
 
                     closed = true;

@@ -23,8 +23,7 @@ public class Main{
         flagInterpreter = new FlagInterpreter();             //instancia a classe que interpreta as flags
 
         main = new Main();                                   //instancia o objeto com esse script
-        menu = new Menu(main.scan);
-        //main.initDialogueLoop();                             //executa a função que inicia o loop do dialogo   
+        menu = new Menu(main.scan);  
     }
 
     //método construtor || 3° função a ser executada
@@ -36,13 +35,13 @@ public class Main{
          */
     }
 
-    //função que inicia o loop de dialogo || 4° função a ser executada
+    //função que inicia o loop de dialogo || penultima função a ser executada
     public void initDialogueLoop(){
         interpreter.updateDialogue("0"); //faz o interpretador de diálogo exibir a 1° linha de diálogo
         update(); //executa a função que atualiza o diálogo
     }
 
-    //função que atualiza o diálogo || 7° função a ser executada 
+    //função que atualiza o diálogo || ultima função a ser executada 
     public void update(){
         String opt = scan.nextLine();           //lê a próxima linha com o scanner
         interpreter.updateDialogue(opt);        //faz o interpretador de diálogo atualizar o dialogo com base na variavel "opt"
