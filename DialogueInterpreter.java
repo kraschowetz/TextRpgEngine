@@ -27,7 +27,10 @@ public class DialogueInterpreter {
             Integer.parseInt(opt);                  /*verifica se a resposta do usuário é um número*/
         }                                           /***********************************************/
         //caso a resposta não for um numero inteiro:
-        catch (NumberFormatException e) {                   
+        catch (NumberFormatException e) {        
+            System.out.print("\033[H\033[2J");          // limpa o console
+            System.out.flush();                           // limpa o console
+           
             System.out.println("erro: NaN");            //exibe a mensagem de erro
             updateDialogue("0");                      //volta a linha de dialogo para a linha 0
             Main.main.update();                           //retorna ao loop de diálogo
@@ -40,6 +43,9 @@ public class DialogueInterpreter {
 
         //verifica se o número digitado é inválido
         if(Integer.parseInt(opt) < 0 || Integer.parseInt(opt) > optAmmount){
+            System.out.print("\033[H\033[2J");                  //limpa o console
+            System.out.flush();                                   //limpa o console
+
             System.out.println("erro: opção invalida");         //exibe a mensagem de erro
             updateDialogue("0");                              //volta a linha de dialogo para a linha 0
             Main.main.update();                                   //retorna ao loop de diálogo
