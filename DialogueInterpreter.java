@@ -12,7 +12,7 @@ public class DialogueInterpreter {
                 return;
             }
         }
-        currentLine = "0:can not find line error (" + Main.dialogueState +"):1:/okay>0"; 
+        currentLine = "0:erro: nao foi possivel achar a linha de dialogo (" + Main.dialogueState +"):1:/okay>0"; 
     }
 
 
@@ -28,7 +28,7 @@ public class DialogueInterpreter {
         }                                           /***********************************************/
         //caso a resposta não for um numero inteiro:
         catch (NumberFormatException e) {                   
-            System.out.println("NaN error");            //exibe a mensagem de erro
+            System.out.println("erro: NaN");            //exibe a mensagem de erro
             updateDialogue("0");                      //volta a linha de dialogo para a linha 0
             Main.main.update();                           //retorna ao loop de diálogo
             System.out.println("\n\n\n");
@@ -40,7 +40,7 @@ public class DialogueInterpreter {
 
         //verifica se o número digitado é inválido
         if(Integer.parseInt(opt) < 0 || Integer.parseInt(opt) > optAmmount){
-            System.out.println("invalid option error");         //exibe a mensagem de erro
+            System.out.println("erro: opção invalida");         //exibe a mensagem de erro
             updateDialogue("0");                              //volta a linha de dialogo para a linha 0
             Main.main.update();                                   //retorna ao loop de diálogo
             System.out.println("\n\n\n");
