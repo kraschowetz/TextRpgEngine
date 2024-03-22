@@ -64,8 +64,8 @@ public class DialogueInterpreter {
             optAmmount = Integer.parseInt(currentLine.split(":")[2]);//verifica qnts resposta existem para o dialogo
 
             //verifica se a linha atual não possui nenhuma flag
-            if(currentLine.split(";").length > 1){
-                Main.flagInterpreter.interpretFlag(currentLine.split(";")[1]);
+            if(currentLine.split("/").length > 2){
+                Main.flagInterpreter.interpretFlag(currentLine.split("/")[2]);
             }
 
         }
